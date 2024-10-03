@@ -40,7 +40,7 @@ export default function App() {
         </View>
         <View style={styles.buttonsModal}>
           <Button title="Close" secondary onPress={() => setVisible(false)} />
-          <Button title="Close" isLoading onPress={() => setVisible(false)} />
+          <Button title="Close" onPress={() => setVisible(false)} />
         </View>
       </Modal>
       <StatusBar style="auto" />
@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
   content: {
     flex: 2,
     alignItems: "center",
-    // backgroundColor: "red",
     justifyContent: "space-evenly"
   },
   iconModal: {
@@ -73,7 +72,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-evenly",
-    // backgroundColor: "green"
   },
   titleModal: {
     fontFamily: theme.fonts.medium,

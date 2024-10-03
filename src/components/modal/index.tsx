@@ -9,6 +9,7 @@ type ModalProps = {
 export function Modal({ visible, children }: PropsWithChildren<ModalProps>) {
   return (
     <View>
+        
       <AppModal animationType="slide" visible={visible} transparent>
         <View style={styles.container}>
           <View style={styles.modalView}>
