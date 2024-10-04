@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
-    borderColor: theme.colors.primary,
     borderRadius: 10,
     paddingHorizontal: 6,
     // backgroundColor: "red",
@@ -21,9 +20,8 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontFamily: theme.fonts.medium,
-    fontSize: 18,
-    color: theme.colors.primary,
-    marginVertical: -5
+    fontSize: 16,
+    marginVertical: -5,
   },
   content: {
     width: "80%",

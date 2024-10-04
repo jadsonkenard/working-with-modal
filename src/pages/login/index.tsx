@@ -5,8 +5,8 @@ import { Input } from "../../components";
 export function Login() {
   return (
     <View style={styles.container}>
-      <Input icon="envelope-o" />
-      <Input icon="envelope-o" eye="eye" />
+      <Input title="Email" icon="envelope-o" error />
+      <Input title="Senha" icon="lock" eye="eye" />
     </View>
   );
 }
