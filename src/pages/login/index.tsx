@@ -1,16 +1,12 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import { styles } from "./styles";
-import { Button, Input } from "../../components";
-import { useNavigation } from "@react-navigation/native";
-import { StackType } from "../../routes/routes";
-
+import { Input } from "../../components";
 
 export function Login() {
-    const { navigate } = useNavigation<StackType>();
-
   return (
     <View style={styles.container}>
-      <Input></Input>
+      <Input icon="envelope-o" />
+      <Input icon="envelope-o" eye="eye" />
     </View>
   );
 }
