@@ -7,7 +7,7 @@ const height = Dimensions.get("window").height;
 export const styles = StyleSheet.create({
   container: {
     height: height * 0.06,
-    width: width * 0.45,
+    width: width * 0.40,
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 18,

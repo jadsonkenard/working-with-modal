@@ -26,7 +26,8 @@ export const styles = StyleSheet.create({
   content: {
     width: "80%",
     height: "100%",
-    // backgroundColor: "blue",
+    fontSize: 20,
+    fontFamily: theme.fonts.regular,
   },
   icon: {
     height: "100%",

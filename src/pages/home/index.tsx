@@ -30,8 +30,8 @@ export function Home() {
           </Text>
         </View>
         <View style={styles.buttonsModal}>
-          <Button title="Login" secondary onPress={() => navigate("login")} />
-          <Button title="Cadastrar" onPress={() => navigate("register")} />
+          <Button title="Cancelar" secondary onPress={() => setVisible(false)} />
+          <Button title="Login" onPress={() => navigate("login")} />
         </View>
       </Modal>
     </View>
