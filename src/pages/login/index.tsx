@@ -6,21 +6,49 @@ import { useNavigation } from "@react-navigation/native";
 import { StackType } from "../../routes/routes";
 
 export function Login() {
-  const [error, setError] = useState(false);
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [errorEmail, setErrorEmail] = useState(false);
+  const [errorPassword, setErrorPassword] = useState(false);
   const [hidePass, setHidePass] = useState(true);
 
   const { goBack, navigate } = useNavigation<StackType>();
 
+  function validateForm(){
+    if(email == "") {
+      setErrorEmail(true)
+      return
+    }
+    if(password == "") {
+      setErrorPassword(true)
+      return
+    }
+  }
+
   return (
     <View style={styles.container}>
-      <Input title="Email" icon="envelope-o" error={error} />
+      <Input
+        title="Email"
+        icon="envelope-o"
+        error={errorEmail}
+        autoCapitalize="none"
+        autoCorrect={false}
+        value={email}
+        onChange={() => setErrorEmail(false)}
+        onChangeText={setEmail}
+      />
       <Input
         title="Senha"
         icon="lock"
         eye={hidePass ? "eye" : "eye-slash"}
         secureTextEntry={hidePass}
         onPrees={() => setHidePass(!hidePass)}
-        error={error}
+        error={errorPassword}
+        autoCapitalize="none"
+        autoCorrect={false}
+        value={password}
+        onChange={() => setErrorPassword(false)}
+        onChangeText={setPassword}
       />
       <View style={styles.forgotPassword}>
         <TouchableOpacity>
@@ -29,7 +57,7 @@ export function Login() {
       </View>
       <View style={styles.buttons}>
         <Button title="Cancelar" secondary onPress={() => goBack()} />
-        <Button title="Entrar" />
+        <Button title="Entrar" onPress={validateForm}/>
       </View>
       <View style={styles.createAccount}>
         <Text style={styles.createAccountTitle}>Ainda não tem uma conta? </Text>

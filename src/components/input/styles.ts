@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
     width: "80%",
     height: "100%",
     fontSize: 20,
-    fontFamily: theme.fonts.regular,
+    fontFamily: theme.fonts.medium,
   },
   icon: {
     height: "100%",
